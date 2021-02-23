@@ -330,8 +330,6 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
 
-                              
-
                               //About Me
                               _wrapScrollTag(
                                 index: 0,
@@ -342,10 +340,7 @@ class _HomePageState extends State<HomePage> {
                               ),
 
                               //Where I've Worked
-                              _wrapScrollTag(
-                                index: 1,
-                                child:Work()
-                              ),
+                              _wrapScrollTag(index: 1, child: Work()),
                               SizedBox(
                                 height: size.height * 0.10,
                               ),
