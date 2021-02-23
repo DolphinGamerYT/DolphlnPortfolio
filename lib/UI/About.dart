@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:potrtfolio/Widget/CustomText.dart';
 
+import 'package:potrtfolio/const.dart';
+
 class About extends StatelessWidget {
   Widget technology(BuildContext context, String text) {
     return Row(
       children: [
         Icon(
           Icons.skip_next,
-          color: Color(0xff64FFDA).withOpacity(0.6),
+          color: theme_color.withOpacity(0.6),
           size: 14.0,
         ),
         SizedBox(
@@ -43,9 +45,9 @@ class About extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     CustomText(
-                      text: "01.",
+                      text: "1.",
                       textsize: 20.0,
-                      color: Color(0xff61F9D5),
+                      color: theme_color,
                       fontWeight: FontWeight.w700,
                     ),
                     SizedBox(
@@ -77,21 +79,14 @@ class About extends StatelessWidget {
                   children: [
                     CustomText(
                       text:
-                          "Hello! I'm Tushar, a Freelancer based in Nashik, IN.\n\nI enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.\n\n",
+                          "I’m Dolphln, a guy which just wants and enjoys to learn more and more, \nand in a near future, make the world a better place to be alive. - Made in Spain\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
                       letterSpacing: 0.75,
                     ),
                     CustomText(
                       text:
-                          "Shortly currently, I am purshuing my Bachlor's degree in Computter science and Engineering at University of Pune, as well as doing freelancing where I work on a wide variety of interesting and meaningful projects on a daily basis.\n\n",
-                      textsize: 16.0,
-                      color: Color(0xff828DAA),
-                      letterSpacing: 0.75,
-                    ),
-                    CustomText(
-                      text:
-                          "Here are a few technologies I've been working with recently:\n\n",
+                          "\nRight now I'm know and actually using the following programming languages:\n\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
                       // fontWeight: FontWeight.w500,
@@ -112,8 +107,8 @@ class About extends StatelessWidget {
                           children: [
                             technology(context, "Dart"),
                             technology(context, "Flutter"),
-                            technology(context, "Firebase"),
-                            technology(context, "UI/UX (Adobe Xd)"),
+                            technology(context, "Java"),
+                            technology(context, "Spigot API"),
                           ],
                         ),
                       ),
@@ -122,9 +117,9 @@ class About extends StatelessWidget {
                         height: size.height * 0.15,
                         child: Column(
                           children: [
-                            technology(context, "C/C++, Java."),
-                            technology(context, "HTML & (S)CSS"),
-                            technology(context, "MYSQL"),
+                            technology(context, "BungeeCord API"),
+                            technology(context, "MongoDB"),
+                            technology(context, "Python"),
                             technology(context, "Git - Github"),
                           ],
                         ),
@@ -137,7 +132,7 @@ class About extends StatelessWidget {
           ),
 
           //Profile Image
-          Expanded(
+          /*Expanded(
             child: Container(
               height: size.height / 1.5,
               width: size.width / 2 - 100,
@@ -149,7 +144,7 @@ class About extends StatelessWidget {
                     top: size.height * 0.12,
                     left: size.width * 0.120,
                     child: Card(
-                      color: Color(0xff61F9D5),
+                      color: theme_color,
                       child: Container(
                         margin: EdgeInsets.all(2.75),
                         height: size.height / 2,
@@ -162,7 +157,7 @@ class About extends StatelessWidget {
                 ],
               ),
             ),
-          ),
+          ),*/
         ],
       ),
     );
@@ -177,7 +172,7 @@ class CustomImageAnimation extends StatefulWidget {
 }
 
 class _CustomImageAnimationState extends State<CustomImageAnimation> {
-  Color customImageColor = Color(0xff61F9D5).withOpacity(0.5);
+  Color customImageColor = theme_color.withOpacity(0.5);
   // ignore: unused_field
   int _enterCounter = 0;
   // ignore: unused_field
@@ -193,7 +188,7 @@ class _CustomImageAnimationState extends State<CustomImageAnimation> {
 
   void _incrementExit(PointerEvent details) {
     setState(() {
-      customImageColor = Color(0xff61F9D5).withOpacity(0.5);
+      customImageColor = theme_color.withOpacity(0.5);
       _exitCounter++;
     });
   }
@@ -225,7 +220,7 @@ class _CustomImageAnimationState extends State<CustomImageAnimation> {
             ),
           ),
           Container(
-            height: size.height / 2,
+            height: size.height / 5,
             width: size.width / 5,
             color: customImageColor,
           ),

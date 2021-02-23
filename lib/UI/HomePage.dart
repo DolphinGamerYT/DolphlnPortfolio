@@ -11,6 +11,8 @@ import 'package:potrtfolio/Widget/MainTiitle.dart';
 import 'package:potrtfolio/Widget/OSImages.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
+import 'package:potrtfolio/const.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -92,15 +94,15 @@ class _HomePageState extends State<HomePage> {
                           icon: Icon(
                             Icons.change_history,
                             size: 32.0,
-                            color: Color(0xff64FFDA),
+                            color: theme_color,
                           ),
                           onPressed: () {}),
                       Spacer(),
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          padding: const EdgeInsets.all(0.1),
                           child: DefaultTabController(
-                            length: 4,
+                            length: 3,
                             child: TabBar(
                               indicatorColor: Colors.transparent,
                               onTap: (index) async {
@@ -109,22 +111,17 @@ class _HomePageState extends State<HomePage> {
                               tabs: [
                                 Tab(
                                   child: AppBarTitle(
-                                    text: 'About',
+                                    text: 'About Me',
                                   ),
                                 ),
                                 Tab(
                                   child: AppBarTitle(
-                                    text: 'Experience',
+                                    text: 'Past Work',
                                   ),
                                 ),
                                 Tab(
                                   child: AppBarTitle(
-                                    text: 'Project',
-                                  ),
-                                ),
-                                Tab(
-                                  child: AppBarTitle(
-                                    text: 'Contact Us',
+                                    text: "Let's get in touch!",
                                   ),
                                 ),
                               ],
@@ -132,11 +129,11 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      Padding(
+                      /*Padding(
                         padding: const EdgeInsets.symmetric(vertical: 16.0),
                         child: Card(
                           elevation: 4.0,
-                          color: Color(0xff64FFDA),
+                          color: theme_color,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6.0),
                           ),
@@ -150,7 +147,8 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(6.0),
                             ),
                             child: FlatButton(
-                              hoverColor: Color(0xFF3E0449),
+                              height: size.height * 0.07,
+                              hoverColor: Color(0xFF074579),
                               onPressed: () {
                                 method.launchURL(
                                     "https://drive.google.com/file/d/1yHLcrN5pCUGIeT8SrwC2L95Lv0MVbJpx/view?usp=sharing");
@@ -160,16 +158,16 @@ class _HomePageState extends State<HomePage> {
                                   horizontal: 8.0,
                                 ),
                                 child: Text(
-                                  "Resume",
+                                  "Let's work together!",
                                   style: TextStyle(
-                                    color: Color(0xff64FFDA),
+                                    color: theme_color,
                                   ),
                                 ),
                               ),
                             ),
                           ),
                         ),
-                      ),
+                      ),*/
                     ],
                   ),
                 ),
@@ -189,30 +187,14 @@ class _HomePageState extends State<HomePage> {
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
-                              method.launchURL("https://github.com/champ96k");
+                              method.launchURL("https://github.com/DolphinGamerYT");
                             }),
                         IconButton(
                             icon: FaIcon(FontAwesomeIcons.twitter),
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
-                              method.launchURL("https://twitter.com/champ_96k");
-                            }),
-                        IconButton(
-                          icon: FaIcon(FontAwesomeIcons.linkedin),
-                          color: Color(0xffffA8B2D1),
-                          onPressed: () {
-                            method.launchURL(
-                                "https://www.linkedin.com/in/tushar-nikam-a29a97131/");
-                          },
-                          iconSize: 16.0,
-                        ),
-                        IconButton(
-                            icon: Icon(Icons.call),
-                            color: Color(0xffffA8B2D1),
-                            iconSize: 16.0,
-                            onPressed: () {
-                              method.launchCaller();
+                              method.launchURL("https://twitter.com/DolphlnDev");
                             }),
                         IconButton(
                             icon: Icon(Icons.mail),
@@ -249,16 +231,16 @@ class _HomePageState extends State<HomePage> {
                                     height: size.height * .06,
                                   ),
                                   CustomText(
-                                    text: "Hi, my name is",
+                                    text: "Welcome, I'm",
                                     textsize: 16.0,
-                                    color: Color(0xff41FBDA),
+                                    color: theme_color,
                                     letterSpacing: 3.0,
                                   ),
                                   SizedBox(
                                     height: 6.0,
                                   ),
                                   CustomText(
-                                    text: "Tushar Nikam.",
+                                    text: "Dolphln",
                                     textsize: 68.0,
                                     color: Color(0xffCCD6F6),
                                     fontWeight: FontWeight.w900,
@@ -268,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   CustomText(
                                     text:
-                                        "I build things for the Android and web.",
+                                        "This is my portfolio!",
                                     textsize: 56.0,
                                     color: Color(0xffCCD6F6).withOpacity(0.6),
                                     fontWeight: FontWeight.w700,
@@ -276,10 +258,9 @@ class _HomePageState extends State<HomePage> {
                                   SizedBox(
                                     height: size.height * .04,
                                   ),
-                                  Wrap(
+                                  /*Wrap(
                                     children: [
                                       Text(
-                                        "I'm a freelancer based in Nashik, IN specializing in \nbuilding (and occasionally designing) exceptional websites, \napplications, and everything in between.",
                                         style: TextStyle(
                                           color: Colors.grey,
                                           fontSize: 16.0,
@@ -288,7 +269,7 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                       )
                                     ],
-                                  ),
+                                  ),*/
                                   SizedBox(
                                     height: size.height * .12,
                                   ),
@@ -299,7 +280,7 @@ class _HomePageState extends State<HomePage> {
                                       method.launchEmail();
                                     },
                                     hoverColor:
-                                        Color(0xff64FFDA).withOpacity(0.2),
+                                        theme_color.withOpacity(0.2),
                                     borderRadius: BorderRadius.circular(4.0),
                                     child: Container(
                                       alignment: Alignment.center,
@@ -307,7 +288,7 @@ class _HomePageState extends State<HomePage> {
                                       width: size.width * 0.14,
                                       decoration: BoxDecoration(
                                         border: Border.all(
-                                          color: Color(0xff64FFDA),
+                                          color: theme_color,
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(4.0),
@@ -315,7 +296,7 @@ class _HomePageState extends State<HomePage> {
                                       child: Text(
                                         "Get In Touch",
                                         style: TextStyle(
-                                          color: Color(0xff64FFDA),
+                                          color: theme_color,
                                           letterSpacing: 2.75,
                                           wordSpacing: 1.0,
                                           fontSize: 15.0,
@@ -877,7 +858,7 @@ class _HomePageState extends State<HomePage> {
                                           CustomText(
                                             text: "0.4 What's Next?",
                                             textsize: 16.0,
-                                            color: Color(0xff41FBDA),
+                                            color: theme_color,
                                             letterSpacing: 3.0,
                                           ),
                                           SizedBox(
@@ -916,7 +897,7 @@ class _HomePageState extends State<HomePage> {
                                             },
                                             child: Card(
                                               elevation: 4.0,
-                                              color: Color(0xff64FFDA),
+                                              color: theme_color,
                                               shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(6.0),
@@ -940,7 +921,7 @@ class _HomePageState extends State<HomePage> {
                                                   child: Text(
                                                     "Say Hello",
                                                     style: TextStyle(
-                                                      color: Color(0xff64FFDA),
+                                                      color: theme_color,
                                                     ),
                                                   ),
                                                 ),
@@ -961,7 +942,7 @@ class _HomePageState extends State<HomePage> {
                                           100,
                                       //color: Colors.white,
                                       child: Text(
-                                        "Designed & Built by Tushar Nikam 💙 Flutter",
+                                        "Designed by Tushar Nikam | Developed by Dolphln 💙 Flutter",
                                         style: TextStyle(
                                           color: Colors.white.withOpacity(0.4),
                                           letterSpacing: 1.75,
